@@ -1,6 +1,7 @@
+import { EditClientPage } from './../pages/edit-client/edit-client';
+import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
-
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -33,7 +34,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TravelAgentsPage,
     EditTravelAgentPage,
     AddNewAgentPage,
-    ClientsPage
+    ClientsPage,
+    AddNewClientPage,
+    EditClientPage
 
   ],
   imports: [
@@ -50,7 +53,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TravelAgentsPage,
     EditTravelAgentPage,
     AddNewAgentPage,
-    ClientsPage
+    ClientsPage,
+    AddNewClientPage,
+    EditClientPage
 
   ],
   providers: [

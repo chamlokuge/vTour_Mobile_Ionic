@@ -1,7 +1,7 @@
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
-
-
+import { EditClientPage } from './../pages/edit-client/edit-client';
+import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
 
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
