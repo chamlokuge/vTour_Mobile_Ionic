@@ -1,5 +1,5 @@
 <!--
-  Generated template for the EditServiceProvidersPage page.
+  Generated template for the AddNewServiceProviderPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,55 +7,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>editServiceProviders</ion-title>
+    <ion-title>Add New Service Provider</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
-    <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-        <ion-list>
-          <ion-item margin-bottom>
-            <ion-label floating>First Name</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.fname" formControlName="fname"></ion-input>
-          </ion-item>
-    
-              
-          <ion-item margin-bottom>
-            <ion-label floating>User Nsme</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.username" formControlName="username"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label floating>E-mail</ion-label>
-            <ion-input type="email" [(ngModel)]="tagent.email" formControlName="email"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label floating>Telephone</ion-label>
-            <ion-input type="number" [(ngModel)]="tagent.telephone" formControlName="telephone"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label floating>Address</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.address" formControlName="address"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label floating>Type</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.type" formControlName="type"></ion-input>
-          </ion-item>
 
-          <ion-item margin-bottom>
-              <ion-label floating>Description</ion-label>
-              <ion-input type="text" [(ngModel)]="tagent.discription" formControlName="discription"></ion-input>
-            </ion-item>
-    
-          <button ion-button color="primary" text-center block>Save this record</button>
-          <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
-        </ion-list>
-      </form>
-    
-    
+  <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <ion-list>
+      <ion-item margin-bottom>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.fname" formControlName="fname"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>User Name</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.username" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.address" formControlName="address"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="tagent.email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Telephone</ion-label>
+        <ion-input type="number" [(ngModel)]="tagent.telephone" formControlName="telephone"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.description" formControlName="description"></ion-input>
+      </ion-item>
+
+      <button ion-button color="primary" text-center block>Save this record</button>
+      <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
+    </ion-list>
+  </form>
+
+
 </ion-content>

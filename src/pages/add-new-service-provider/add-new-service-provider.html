@@ -7,83 +7,85 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>addNewServiceProvider</ion-title>
+    <ion-title>Add New Service Provider</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding id="page7" style="background-color:#F9FBFA;">
-  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
-    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
-  </div>
-  <form id="addNewServiceProvider-form8">
-    <ion-item>
-      <ion-label>
-        First Name
-      </ion-label>
-      <ion-input type="text" placeholder="enter first name" name="fname"></ion-input>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-input34">
-      <ion-label>
-        E-mail
-      </ion-label>
-      <ion-input type="email" placeholder="e-mail" name="email"></ion-input>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-input35">
-      <ion-label>
-        Password
-      </ion-label>
-      <ion-input type="password" placeholder="password" name="password"></ion-input>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-input36">
-      <ion-label>
-        Re-Enter Password
-      </ion-label>
-      <ion-input type="password" placeholder="password" name="password"></ion-input>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-input37">
-      <ion-label>
-        Telephone
-      </ion-label>
-      <ion-input type="tel" placeholder="telephone" name="telephone"></ion-input>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-textarea4">
-      <ion-label>
-        Address
-      </ion-label>
-      <ion-textarea placeholder="address"></ion-textarea>
-    </ion-item>
-    <ion-item id="addNewServiceProvider-select1">
-      <ion-label>
-        Type
-      </ion-label>
-      <ion-select name="">
-        <ion-option>
-          Transport
-        </ion-option>
-        <ion-option>
-          Hotel
-        </ion-option>
-        <ion-option>
-          Resort
-        </ion-option>
-        <ion-option>
-          Park
-        </ion-option>
-        <ion-option>
-          Play Ground
-        </ion-option>
-        <ion-option>
-          Other
-        </ion-option>
-      </ion-select>
-    </ion-item>
-  </form>
-  <button id="addNewServiceProvider-button14" ion-button color="energized" block>
-    Reset
-  </button>
-  <button id="addNewServiceProvider-button15" ion-button color="energized" full >
-    Add Service Provider
-  </button>
-</ion-content>
+<ion-content padding>
 
+  <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <ion-list>
+      <ion-item margin-bottom>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="fname" formControlName="fname"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>User Name</ion-label>
+        <ion-input type="text" [(ngModel)]="username" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Address</ion-label>
+        <ion-input type="text" [(ngModel)]="address" formControlName="address"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Re Enter Password</ion-label>
+        <ion-input type="Password" [(ngModel)]="rePassword" formControlName="rePassword"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="password!=''&&password!=rePassword" style="color:red">Passwords
+        Do Not Match !</ion-label>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Telephone</ion-label>
+        <ion-input type="number" [(ngModel)]="telephone" formControlName="telephone"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Type</ion-label>
+        <ion-select [(ngModel)]="type" formControlName="type">
+          <ion-option>
+            Transport
+          </ion-option>
+          <ion-option>
+            Hotel
+          </ion-option>
+          <ion-option>
+            Resort
+          </ion-option>
+          <ion-option>
+            Park
+          </ion-option>
+          <ion-option>
+            Play Ground
+          </ion-option>
+          <ion-option>
+            Other
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="description" formControlName="description"></ion-input>
+      </ion-item>
+
+      <button ion-button color="primary" text-center block>Save this record</button>
+      <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
+    </ion-list>
+  </form>
+
+
+</ion-content>

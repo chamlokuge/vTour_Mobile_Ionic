@@ -24,7 +24,10 @@ export class AddNewServiceProviderPage {
   public email: any;
   public address: string;
   public type : string;
-  public usertype : string;
+  public description : string;
+  public telephone: any;
+  public rePassword: any;
+  public username:string
 
   private _HOST : string 			=	"http://localhost:4201/";
 
@@ -35,11 +38,13 @@ export class AddNewServiceProviderPage {
       this.form = this._FB.group({
         'fname': ['', Validators.required],
         'password': ['', Validators.required],
+        'rePassword': ['', Validators.required],
         'email': ['', Validators.required],
         'address': ['', Validators.required],
         'type': ['', Validators.required],
-        'usertype': ['', Validators.required],
-        //'profilepic': ['', Validators.required],
+        'description': ['', Validators.required],
+        'telephone': ['', Validators.required],
+        'username': ['', Validators.required],
         
       });
     }
@@ -63,22 +68,26 @@ export class AddNewServiceProviderPage {
     //this._ID = "";
     this.fname = "";
     this.password = "";
+    this.rePassword = "";
     this.email = "";
     this.address=""
     this.type = "";
-    this.usertype="";
-        //this.profilepic = "";
+    this.description="";
+    this.telephone = "";
+    this.username="";
       }
       onSubmit(){
         let fname: any = this.form.controls['fname'].value,
         password: any = this.form.controls['password'].value,
+          rePassword: any = this.form.controls['rePassword'].value,
         email: any = this.form.controls['email'].value,
           address: any = this.form.controls['address'].value,
           type: any = this.form.controls['type'].value,
-          // profilepic: any = this.form.controls['profilepic'].value,
-          usertype: any = this.form.controls['usertype'].value,
+          telephone: any = this.form.controls['telephone'].value,
+          description: any = this.form.controls['description'].value,
+          username: any = this.form.controls['username'].value,
           headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options: any = { fname: fname, password: password,email: email, address: address, type: type, usertype: usertype },
+          options: any = { fname: fname, password: password, username:username, email: email, address: address, type: type, telephone: telephone, description: description },
           url: any = this._HOST + "serviceproviders";
     
         this._HTTP

@@ -63,7 +63,7 @@ export class ServiceProvidersPage {
       .subscribe((data : any) =>
       {
          this.retrieve();
-         this.displayNotification(data.records.name + ' was successfully deleted');
+         this.displayNotification('successfully deleted');
       },
       (error : any) =>
       {
