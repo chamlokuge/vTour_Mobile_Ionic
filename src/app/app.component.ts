@@ -1,6 +1,11 @@
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
+<<<<<<< HEAD
+=======
+import { EditClientPage } from './../pages/edit-client/edit-client';
+import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
+>>>>>>> 8af7cd362bbbf94f111e8ad964c8175377935942
 
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';

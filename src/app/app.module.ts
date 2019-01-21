@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import { AddNewServiceProviderPage } from './../pages/add-new-service-provider/add-new-service-provider';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
+=======
+import { EditClientPage } from './../pages/edit-client/edit-client';
+import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
+>>>>>>> 8af7cd362bbbf94f111e8ad964c8175377935942
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
-
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -37,9 +41,14 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditTravelAgentPage,
     AddNewAgentPage,
     ClientsPage,
+<<<<<<< HEAD
     ServiceProvidersPage,
     AddNewServiceProviderPage,
     EditServiceProvidersPage
+=======
+    AddNewClientPage,
+    EditClientPage
+>>>>>>> 8af7cd362bbbf94f111e8ad964c8175377935942
 
   ],
   imports: [
@@ -57,9 +66,14 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditTravelAgentPage,
     AddNewAgentPage,
     ClientsPage,
+<<<<<<< HEAD
     ServiceProvidersPage,
     AddNewServiceProviderPage,
     EditServiceProvidersPage
+=======
+    AddNewClientPage,
+    EditClientPage
+>>>>>>> 8af7cd362bbbf94f111e8ad964c8175377935942
 
   ],
   providers: [
