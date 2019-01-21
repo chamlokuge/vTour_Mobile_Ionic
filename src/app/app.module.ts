@@ -1,3 +1,5 @@
+import { AddNewServiceProviderPage } from './../pages/add-new-service-provider/add-new-service-provider';
+import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
 
@@ -23,6 +25,7 @@ import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-ag
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-service-providers';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TravelAgentsPage,
     EditTravelAgentPage,
     AddNewAgentPage,
-    ClientsPage
+    ClientsPage,
+    ServiceProvidersPage,
+    AddNewServiceProviderPage,
+    EditServiceProvidersPage
 
   ],
   imports: [
@@ -50,7 +56,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TravelAgentsPage,
     EditTravelAgentPage,
     AddNewAgentPage,
-    ClientsPage
+    ClientsPage,
+    ServiceProvidersPage,
+    AddNewServiceProviderPage,
+    EditServiceProvidersPage
 
   ],
   providers: [

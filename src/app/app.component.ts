@@ -1,7 +1,6 @@
+import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
-
-
 
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -35,6 +34,7 @@ export class MyApp {
       { title: 'Edit Profile', component: EditProfilePage },
       { title: 'Travel Agents', component: TravelAgentsPage },
       { title: 'Clients', component: ClientsPage },
+      { title: 'Service Providers', component: ServiceProvidersPage },
     ];
 
   }
