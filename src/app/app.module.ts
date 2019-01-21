@@ -1,3 +1,6 @@
+import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
+import { EditPackagePage } from './../pages/edit-package/edit-package';
+import { PackagesPage } from './../pages/packages/packages';
 import { EditClientPage } from './../pages/edit-client/edit-client';
 import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
 import { ClientsPage } from './../pages/clients/clients';
@@ -36,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AddNewAgentPage,
     ClientsPage,
     AddNewClientPage,
-    EditClientPage
+    EditClientPage,
+    PackagesPage,
+    EditPackagePage,
+    AddNewPackagePage
 
   ],
   imports: [
@@ -55,7 +61,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AddNewAgentPage,
     ClientsPage,
     AddNewClientPage,
-    EditClientPage
+    EditClientPage,
+    PackagesPage,
+    EditPackagePage,
+    AddNewPackagePage
 
   ],
   providers: [

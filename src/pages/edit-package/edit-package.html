@@ -1,0 +1,55 @@
+<!--
+  Generated template for the AddNewPackagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit Package</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <ion-input type="text" [(ngModel)]="package.spname" formControlName="name" hidden></ion-input>
+
+    <ion-input type="text" [(ngModel)]="package.spid" formControlName="name" hidden></ion-input>
+
+    <ion-list>
+      <ion-item margin-bottom>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="package.name" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Type</ion-label>
+        <ion-input type="text" [(ngModel)]="package.type" formControlName="type"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Availability</ion-label>
+        <ion-input type="text" [(ngModel)]="package.availability" formControlName="availability"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="package.description" formControlName="description"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label floating>Price</ion-label>
+        <ion-input type="email" [(ngModel)]="package.price" formControlName="price"></ion-input>
+      </ion-item>
+
+      <button ion-button color="primary" text-center block>Save this record</button>
+      <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
+    </ion-list>
+  </form>
+
+
+</ion-content>
