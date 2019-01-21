@@ -1,0 +1,161 @@
+<!--
+  Generated template for the AddNewAgentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--ion-header>
+
+  <ion-navbar color ="danger">
+    <ion-title>Add New Agent</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+ <ion-content padding>
+
+</ion-content> -->
+
+<!--ion-content padding id="page3" style="background-color:#F9FBFA;">
+    <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+      <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+    </div>
+    <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" id="addNewAgent-form3">
+      <ion-item id="addNewAgent-input7">
+        <ion-label>
+          First Name
+        </ion-label>
+        <ion-input type="text" placeholder="enter first name" name="fname"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-input8">
+        <ion-label>
+          Last Name
+        </ion-label>
+        <ion-input type="text" placeholder="enter last name" name="lname"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-input11">
+        <ion-label>
+          User Name
+        </ion-label>
+        <ion-input type="text" placeholder="user name" name="username"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-input9">
+        <ion-label>
+          E-mail
+        </ion-label>
+        <ion-input type="email" placeholder="e-mail" name="email"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-input12">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder="password" name="password"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-input13">
+        <ion-label>
+          Re-Enter Password
+        </ion-label>
+        <ion-input type="password" [(ngModel)]="rePassword" placeholder="Re Enter Password" name="rePassword"></ion-input>
+      </ion-item>
+      <ion-label *ngIf="password!=''&&password!=rePassword" style="color:red">Passwords
+          Do Not Match !</ion-label>
+      <ion-item id="addNewAgent-input10">
+        <ion-label>
+          Telephone
+        </ion-label>
+        <ion-input type="tel" placeholder="telephone" name="telephone"></ion-input>
+      </ion-item>
+      <ion-item id="addNewAgent-textarea2">
+        <ion-label>
+          Address
+        </ion-label>
+        <ion-textarea [(ngModel)]="address" formControlName="address" placeholder="address"></ion-textarea>
+      </ion-item>
+      <ion-item id="addNewAgent-toggle2">
+        <ion-label>
+          Is admin
+        </ion-label>
+        <ion-toggle [(ngModel)]="isadmin" formControlName="isadmin" color="energized" checked="false"></ion-toggle>
+      </ion-item>
+    </form>
+    <button id="addNewAgent-button5" ion-button color="energized" outline>
+      Reset
+    </button>
+    <button id="addNewAgent-button8" ion-button color="energized" full>
+      Add Travel Agent
+    </button>
+  </ion-content>-->
+<!--
+  Generated template for the AddNewTravelAgentFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Add New Travel Agent Form</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+      <ion-list>
+        <ion-item margin-bottom>
+          <ion-label floating>First Name</ion-label>
+          <ion-input type="text" [(ngModel)]="fname" formControlName="fname"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="lname" formControlName="lname"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>User Name</ion-label>
+          <ion-input type="text" [(ngModel)]="username" formControlName="username"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Address</ion-label>
+          <ion-input type="text" [(ngModel)]="address" formControlName="address"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" formControlName="email"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" formControlName="password"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Re Enter Password</ion-label>
+          <ion-input type="Password" [(ngModel)]="rePassword" formControlName="rePassword"></ion-input>
+        </ion-item>
+        <ion-label *ngIf="password!=''&&password!=rePassword" style="color:red">Passwords
+          Do Not Match !</ion-label>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Telephone</ion-label>
+          <ion-input type="number" [(ngModel)]="telephone" formControlName="telephone"></ion-input>
+        </ion-item>
+  
+        <ion-item margin-bottom>
+          <ion-label floating>Is Admin</ion-label>
+          <ion-input type="text" [(ngModel)]="isadmin" formControlName="isadmin"></ion-input>
+        </ion-item>
+  
+        <button ion-button color="primary" text-center block>Save this record</button>
+        <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
+      </ion-list>
+    </form>
+  
+  
+  </ion-content>

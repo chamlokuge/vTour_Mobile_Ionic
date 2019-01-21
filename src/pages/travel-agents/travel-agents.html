@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-navbar color="danger">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Travel Agents</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <!-- <ion-header> -->
+  
+    <!-- <ion-navbar>
+      <ion-title>Travel Agents</ion-title>
+    </ion-navbar>
+  
+  </ion-header> -->
+  
+  
+  <!-- <ion-content padding>
+  
+  </ion-content> -->
+  
+  <ion-content padding>
+    <ion-list>
+  
+      <ion-item *ngFor="let tagent of items">
+        <ion-avatar item-start>
+        </ion-avatar>
+        <h2>{{ tagent.fname }} {{tagent.lname}}</h2>
+        <p>Email : {{tagent.email}}<br>Telephone : {{tagent.telephone}}<br>Address : {{tagent.address}}</p>
+  
+        <ion-buttons end>
+          <!-- <button ion-button color="danger" (click)="deleteRecord(tagent)">Delete</button> -->
+          <button ion-button icon-only color="red" (click)="deleteRecord(tagent)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+          <!-- <ion-icon ios="ios-trash" md="md-trash"></ion-icon> -->
+  
+          <!-- <button ion-button color="secondary" (click)="updateRecord(tagent)">Update</button> -->
+  
+          <!-- <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)"> -->
+              <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)">
+            <ion-icon name="create"></ion-icon>
+          </button>
+  
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  
+    <!--form [formGroup]="form" (ngSubmit)="manageGallery()">
+      <ion-list>
+        <ion-item margin-bottom>
+          <ion-label>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="name" formControlName="name"></ion-input>
+        </ion-item>
+  
+  
+        <ion-item margin-bottom>
+          <ion-label>Description</ion-label>
+          <ion-textarea type="text" [(ngModel)]="description" formControlName="description"></ion-textarea>
+        </ion-item>
+  
+  
+        <ion-item-group>
+          <ion-item-divider color="light">Image</ion-item-divider>
+  
+          <ion-item>
+            <img [src]="image">
+            <input type="hidden" name="thumbnail" formControlName="thumbnail" [(ngModel)]="thumbnail">
+          </ion-item>
+        </ion-item-group>
+  
+  
+        <ion-item margin-bottom>
+          <ion-label>Is Displayed?</ion-label>
+          <ion-select [(ngModel)]="displayed" formControlName="displayed">
+            <ion-option value="true">True</ion-option>
+            <ion-option value="false">False</ion-option>
+          </ion-select>
+        </ion-item>
+  
+  
+        <button ion-button color="primary" text-center block [disabled]="!form.valid">Save this record</button>
+      </ion-list>
+    </form-->
+  
+    <button ion-button full item-end icon-start color="danger" (click)="addNewAgent()">
+        <ion-icon name="add"></ion-icon>
+        Add New Agent
+      </button>
+  
+     
+  </ion-content>
