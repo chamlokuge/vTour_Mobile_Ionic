@@ -7,6 +7,7 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tokenNotExpired } from 'angular2-jwt';
 import { TravelAgentsPage} from '../travel-agents/travel-agents';
+import { ProfilePage} from '../profile/profile';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -62,7 +63,7 @@ login(){
         });
         alert.present();
       }else{
-        this.navCtrl.push(TravelAgentsPage,{record:data});
+        this.navCtrl.setRoot(ProfilePage,{record:data});
       }
     },
       (error: any) => {

@@ -1,3 +1,6 @@
+import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
@@ -44,6 +47,9 @@ export class MyApp {
       { title: 'Clients', component: ClientsPage },
       { title: 'Service Providers', component: ServiceProvidersPage },
       { title: 'Itenararies', component: ViewItenararyPage },
+      { title: 'Itinerary Payments', component: PaymentsPage },
+      { title: 'Package Payments', component: PackagePaymentsPage },
+      { title: 'Bookings', component: BookingsPage },
     ];
 
   }

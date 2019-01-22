@@ -1,3 +1,6 @@
+import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
 import { EditPackagePage } from './../pages/edit-package/edit-package';
 import { PackagesPage } from './../pages/packages/packages';
@@ -35,6 +38,7 @@ import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
 import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
 
 import { AuthProvider } from '../providers/auth/auth';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -57,8 +61,11 @@ import { AuthProvider } from '../providers/auth/auth';
     EditClientPage,
     ViewItenararyPage,
     ForgotPasswordPage,
-    TravelAgentProfilePage
-
+    TravelAgentProfilePage,
+    PaymentsPage,
+    BookingsPage,
+    PackagePaymentsPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -86,7 +93,11 @@ import { AuthProvider } from '../providers/auth/auth';
     EditClientPage,
     ViewItenararyPage,
     ForgotPasswordPage,
-    TravelAgentProfilePage
+    TravelAgentProfilePage,
+    PaymentsPage,
+    BookingsPage,
+    PackagePaymentsPage,
+    ProfilePage
 
   ],
   providers: [
