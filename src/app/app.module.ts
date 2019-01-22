@@ -1,3 +1,5 @@
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
 import { EditPackagePage } from './../pages/edit-package/edit-package';
 import { PackagesPage } from './../pages/packages/packages';
@@ -50,7 +52,9 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     PackagesPage,
     EditPackagePage,
     AddNewPackagePage,
-    EditClientPage
+    EditClientPage,
+    PaymentsPage,
+    BookingsPage,
 
   ],
   imports: [
@@ -77,6 +81,8 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditPackagePage,
     AddNewPackagePage,
     EditClientPage,
+    PaymentsPage,
+    BookingsPage
 
   ],
   providers: [

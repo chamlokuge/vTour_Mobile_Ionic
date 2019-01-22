@@ -1,3 +1,5 @@
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
@@ -38,6 +40,8 @@ export class MyApp {
       { title: 'Travel Agents', component: TravelAgentsPage },
       { title: 'Clients', component: ClientsPage },
       { title: 'Service Providers', component: ServiceProvidersPage },
+      { title: 'Payments', component: PaymentsPage },
+      { title: 'Bookings', component: BookingsPage },
     ];
 
   }

@@ -14,7 +14,11 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 @Component({
   selector: 'page-add-new-agent',
   templateUrl: 'add-new-agent.html',
+  //  'search/template.html',
 })
+
+
+
 export class AddNewAgentPage {
   public items : Array<any>;
   public form: FormGroup;
@@ -124,6 +128,8 @@ export class AddNewAgentPage {
           console.dir(error);
         });
   }
+  
+
 }
 
 /*  public items : Array<any>;
