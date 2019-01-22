@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angul
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 
-/**
- * Generated class for the AddNewAgentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-add-new-agent',
@@ -19,7 +12,6 @@ export class AddNewAgentPage {
   public items : Array<any>;
   public form: FormGroup;
 
-  //private _ID: String;
   public fname: string;
   public lname: string;
   public username: string;
@@ -27,11 +19,10 @@ export class AddNewAgentPage {
   public email: any;
   public address: string;
   public isadmin: any;
-  //public profilepic: string;
   public telephone: [string];
   public rePassword :any;
 
-   private _HOST : string 			=	"http://localhost:4201/";
+  private _HOST : string 			=	"http://localhost:4201/";
 
 
   constructor(public navCtrl: NavController,
