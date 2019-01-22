@@ -14,7 +14,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
@@ -35,7 +34,6 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'Edit Profile', component: EditProfilePage },
       { title: 'Travel Agents', component: TravelAgentsPage },
       { title: 'Clients', component: ClientsPage },

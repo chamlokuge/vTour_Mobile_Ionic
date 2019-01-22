@@ -25,7 +25,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
@@ -38,7 +37,6 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     EditProfilePage,
     TravelAgentsPage,
     EditTravelAgentPage,
@@ -66,7 +64,6 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     EditProfilePage,
     TravelAgentsPage,
     EditTravelAgentPage,
