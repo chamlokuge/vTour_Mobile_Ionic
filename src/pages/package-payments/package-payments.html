@@ -1,21 +1,20 @@
 <!--
-  Generated template for the PaymentsPage page.
+  Generated template for the PackagePaymentsPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-
     <ion-navbar color="danger">
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>Itinerary Payments</ion-title>
-      </ion-navbar>
-</ion-header>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Package Payments</ion-title>
+    </ion-navbar>
+  </ion-header>
 
 
- <ion-content padding>
+  <ion-content padding>
    
       <form id="Payments-form">
         <!-- <ion-searchbar placeholder="Search Service Providers" name="serviceProviders" id="serviceProviders-search1"></ion-searchbar> -->
@@ -24,12 +23,12 @@
   
         <ion-item>
          
-          <h2>Client Name:{{ tagent.clientname }}</h2>
+          <h2>Service Provider Name:{{ tagent.spname }}</h2>
           
         </ion-item>
       
         <ion-card-content>
-          <p>Itinerary Name : {{tagent.itenararyname}}<br>Amount : {{tagent.amount}}<br>Date : {{tagent.date}}<br>Status :{{tagent.status}}</p>
+          <p>Package Name : {{tagent.packagename}}<br>Travel Agent Name : {{tagent.travelagentname}}<br>Amount : {{tagent.amount}}<br>Date :{{tagent.date}}<br>Status :{{tagent.status}}</p>
         </ion-card-content>
       </ion-card>
         

@@ -1,3 +1,4 @@
+import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
 import { BookingsPage } from './../pages/bookings/bookings';
 import { PaymentsPage } from './../pages/payments/payments';
 import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
@@ -53,7 +54,7 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditClientPage,
     PaymentsPage,
     BookingsPage,
-
+    PackagePaymentsPage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +80,8 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     AddNewPackagePage,
     EditClientPage,
     PaymentsPage,
-    BookingsPage
+    BookingsPage,
+    PackagePaymentsPage
 
   ],
   providers: [
