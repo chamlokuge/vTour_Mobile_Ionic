@@ -31,6 +31,10 @@ import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-ag
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-service-providers';
+import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
+import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
+
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
@@ -51,7 +55,9 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditPackagePage,
     AddNewPackagePage,
     EditClientPage,
-    ViewItenararyPage
+    ViewItenararyPage,
+    ForgotPasswordPage,
+    TravelAgentProfilePage
 
   ],
   imports: [
@@ -78,7 +84,9 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditPackagePage,
     AddNewPackagePage,
     EditClientPage,
-    ViewItenararyPage
+    ViewItenararyPage,
+    ForgotPasswordPage,
+    TravelAgentProfilePage
 
   ],
   providers: [
@@ -88,7 +96,8 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     ToastService,
     CameraProvider,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {}

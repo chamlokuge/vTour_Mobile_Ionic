@@ -5,6 +5,8 @@ import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
 import { EditClientPage } from './../pages/edit-client/edit-client';
 import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
 import { ViewItenararyPage } from '../pages/view-itenarary/view-itenarary';
+
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +18,9 @@ import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
+import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
+import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
+
 
 @Component({
   templateUrl: 'app.html'
