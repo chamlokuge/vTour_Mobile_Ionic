@@ -1,3 +1,6 @@
+import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
 import { EditPackagePage } from './../pages/edit-package/edit-package';
 import { PackagesPage } from './../pages/packages/packages';
@@ -23,7 +26,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
@@ -40,7 +42,6 @@ import { AuthProvider } from '../providers/auth/auth';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     EditProfilePage,
     TravelAgentsPage,
     EditTravelAgentPage,
@@ -57,8 +58,10 @@ import { AuthProvider } from '../providers/auth/auth';
     EditClientPage,
     ViewItenararyPage,
     ForgotPasswordPage,
-    TravelAgentProfilePage
-
+    TravelAgentProfilePage,
+    PaymentsPage,
+    BookingsPage,
+    PackagePaymentsPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,6 @@ import { AuthProvider } from '../providers/auth/auth';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     EditProfilePage,
     TravelAgentsPage,
     EditTravelAgentPage,
@@ -86,7 +88,10 @@ import { AuthProvider } from '../providers/auth/auth';
     EditClientPage,
     ViewItenararyPage,
     ForgotPasswordPage,
-    TravelAgentProfilePage
+    TravelAgentProfilePage,
+    PaymentsPage,
+    BookingsPage,
+    PackagePaymentsPage
 
   ],
   providers: [

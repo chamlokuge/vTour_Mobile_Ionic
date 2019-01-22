@@ -1,3 +1,6 @@
+import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
+import { BookingsPage } from './../pages/bookings/bookings';
+import { PaymentsPage } from './../pages/payments/payments';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
 import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
@@ -14,7 +17,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
@@ -38,12 +40,14 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'Edit Profile', component: EditProfilePage },
       { title: 'Travel Agents', component: TravelAgentsPage },
       { title: 'Clients', component: ClientsPage },
       { title: 'Service Providers', component: ServiceProvidersPage },
       { title: 'Itenararies', component: ViewItenararyPage },
+      { title: 'Itinerary Payments', component: PaymentsPage },
+      { title: 'Package Payments', component: PackagePaymentsPage },
+      { title: 'Bookings', component: BookingsPage },
     ];
 
   }
