@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>packages</ion-title>
+    <ion-title>Packages</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,22 +15,22 @@
 
 <ion-content padding>
   <ion-list>
-
     <ion-item *ngFor="let tagent of items">
-      <ion-avatar item-start>
-      </ion-avatar>
-      <h2>{{ tagent.name }}</h2>
-      <p>Type : {{tagent.type}}<br>Availability : {{tagent.availability}}<br>Price : {{tagent.price}}<br>Description : {{tagent.discription}}</p>
-
-      <ion-buttons end>
-        <button ion-button icon-only color="red" (click)="deleteRecord(tagent)">
-          <ion-icon name="trash"></ion-icon>
-        </button>
-        <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)">
-          <ion-icon name="create"></ion-icon>
-        </button>
-
-      </ion-buttons>
+      <ion-item *ngIf="sp._id==tagent.spid">
+        <ion-avatar item-start>
+        </ion-avatar>
+        <h2>{{ tagent.name }}</h2>
+        <p>Type : {{tagent.type}}<br>Availability : {{tagent.availability}}<br>Price : {{tagent.price}}<br>Description :
+          {{tagent.discription}}</p>
+        <ion-buttons end>
+          <button ion-button icon-only color="red" (click)="deleteRecord(tagent)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+          <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)">
+            <ion-icon name="create"></ion-icon>
+          </button>       
+        </ion-buttons>
+      </ion-item>
     </ion-item>
   </ion-list>
 </ion-content>

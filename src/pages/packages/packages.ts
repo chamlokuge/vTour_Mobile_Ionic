@@ -18,13 +18,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class PackagesPage {
 
   public items: Array<any>;
-
+  sp:any;
   private _HOST: string = "http://localhost:4201/";
 
   constructor(public navCtrl: NavController,
     private _TOAST: ToastController,
-    private _HTTP: HttpClient) { }
+    private _HTTP: HttpClient,
+    public navParams: NavParams,
+) { }
   ionViewDidEnter(): void {
+
+    this.sp = this.navParams.get('record');
     this.retrieve();
   }
 
