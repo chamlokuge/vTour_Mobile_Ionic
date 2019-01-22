@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 /**
  * Generated class for the PaymentsPage page.
  *
@@ -14,12 +15,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'payments.html',
 })
 export class PaymentsPage {
+  public items : Array<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private _HOST : string       =  "http://localhost:4201/";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private _TOAST       : ToastController,
+    private _HTTP       : HttpClient) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PaymentsPage');
   }
 
+  ionViewDidEnter() : void
+   {
+      this.retrieve();
+   }
+
+   retrieve() : void
+   {
+      this._HTTP
+      .get(this._HOST + "itenararypayments")
+      .subscribe((data : any) =>
+      {
+         this.items = data;
+      },
+      (error : any) =>
+      {
+         console.dir(error);
+      });
+   }
+
+   displayNotification(message : string) : void
+   {
+      let toast = this._TOAST.create({
+         message   : message,
+         duration   : 3000
+      });
+      toast.present();
+ 
+ }
+
+ 
 }
