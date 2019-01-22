@@ -89,7 +89,7 @@ export class EditServiceProvidersPage {
     this.fname = "";
     this.email = "";
     this.address = ""
-    this.description = "";
+     this.description = "";
     this.telephone = "";
     this.username = "";
   }

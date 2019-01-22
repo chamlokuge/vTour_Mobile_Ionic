@@ -1,3 +1,4 @@
+import { PackagesPage } from './../packages/packages';
 import { AddNewServiceProviderPage } from './../add-new-service-provider/add-new-service-provider';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
@@ -92,5 +93,9 @@ addServiceProvider(){
 
 editServiceProvider(item:any):void{
   this.navCtrl.push(EditServiceProvidersPage,{ record : item });
+}
+
+viewPkgs(item:any){
+  this.navCtrl.push(PackagesPage, { record: item });
 }
 }
