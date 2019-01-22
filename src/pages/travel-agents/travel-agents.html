@@ -6,21 +6,11 @@
       <ion-title>Travel Agents</ion-title>
     </ion-navbar>
   </ion-header>
-  <!-- <ion-header> -->
-  
-    <!-- <ion-navbar>
-      <ion-title>Travel Agents</ion-title>
-    </ion-navbar>
-  
-  </ion-header> -->
-  
-  
-  <!-- <ion-content padding>
-  
-  </ion-content> -->
   
   <ion-content padding>
-    <ion-list>
+
+  
+ <ion-list>
   
       <ion-item *ngFor="let tagent of items">
         <ion-avatar item-start>
@@ -38,7 +28,7 @@
           <!-- <button ion-button color="secondary" (click)="updateRecord(tagent)">Update</button> -->
   
           <!-- <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)"> -->
-              <button ion-button icon-only color="yellow" (click)="updateRecord(tagent)">
+              <button ion-button icon-only color="energized" (click)="updateRecord(tagent)">
             <ion-icon name="create"></ion-icon>
           </button>
   
@@ -81,12 +71,9 @@
   
         <button ion-button color="primary" text-center block [disabled]="!form.valid">Save this record</button>
       </ion-list>
-    </form-->
-  
+    </form-->   
     <button ion-button full item-end icon-start color="danger" (click)="addNewAgent()">
-        <ion-icon name="add"></ion-icon>
-        Add New Agent
-      </button>
-  
-     
+      <ion-icon name="add"></ion-icon>
+      Add New Travel Agent
+    </button>
   </ion-content>

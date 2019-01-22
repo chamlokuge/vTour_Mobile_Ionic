@@ -48,7 +48,7 @@ export class ClientsPage {
       .delete(url)
       .subscribe((data: any) => {
         this.retrieve();
-        this.displayNotification(data.records.name + ' was successfully deleted');
+        this.displayNotification('successfully deleted');
       },
         (error: any) => {
           console.dir(error);

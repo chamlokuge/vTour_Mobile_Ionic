@@ -1,5 +1,6 @@
 import { AddNewAgentPage } from './../add-new-agent/add-new-agent';
 import { EditTravelAgentPage } from './../edit-travel-agent/edit-travel-agent';
+import {PackagesPage} from '../packages/packages';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -54,7 +55,7 @@ export class TravelAgentsPage {
       .subscribe((data : any) =>
       {
          this.retrieve();
-         this.displayNotification(data.records.name + ' was successfully deleted');
+         this.displayNotification('successfully deleted');
       },
       (error : any) =>
       {

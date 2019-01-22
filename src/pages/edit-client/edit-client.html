@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>Edit Client Details</ion-title>
   </ion-navbar>
 
@@ -18,88 +18,76 @@
   <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
     <ion-list>
       <ion-item margin-bottom>
-        <ion-label floating>First Name</ion-label>
-        <ion-input type="text" [(ngModel)]="fname" formControlName="fname"></ion-input>
+        <ion-label >First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.fname" formControlName="fname"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Last Name</ion-label>
-        <ion-input type="text" [(ngModel)]="lname" formControlName="lname"></ion-input>
+        <ion-label >Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.lname" formControlName="lname"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Address</ion-label>
-        <ion-input type="text" [(ngModel)]="address" formControlName="address"></ion-input>
+        <ion-label >Address</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.address" formControlName="address"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>City</ion-label>
-        <ion-input type="text" [(ngModel)]="city" formControlName="city"></ion-input>
+        <ion-label >City</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.city" formControlName="city"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Country</ion-label>
-        <ion-input type="text" [(ngModel)]="country" formControlName="country"></ion-input>
+        <ion-label >Country</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.country" formControlName="country"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Postal Code</ion-label>
-        <ion-input type="text" [(ngModel)]="postalcode" formControlName="postalcode"></ion-input>
+        <ion-label >Postal Code</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.postalcode" formControlName="postalcode"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Email</ion-label>
-        <ion-input type="email" [(ngModel)]="email" formControlName="email"></ion-input>
+        <ion-label >Email</ion-label>
+        <ion-input type="email" [(ngModel)]="sp.email" formControlName="email"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password" formControlName="password"></ion-input>
+        <ion-label >Telephone</ion-label>
+        <ion-input type="number" [(ngModel)]="sp.telephone" formControlName="telephone"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Re Enter Password</ion-label>
-        <ion-input type="Password" [(ngModel)]="rePassword" formControlName="rePassword"></ion-input>
-      </ion-item>
-      <ion-label *ngIf="password!=''&&password!=rePassword" style="color:red">Passwords
-        Do Not Match !</ion-label>
-
-      <ion-item margin-bottom>
-        <ion-label floating>Telephone</ion-label>
-        <ion-input type="number" [(ngModel)]="telephone" formControlName="telephone"></ion-input>
+        <ion-label >No of Visitors</ion-label>
+        <ion-input type="number" [(ngModel)]="sp.noofvisitors" formControlName="noofvisitors"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>No of Visitors</ion-label>
-        <ion-input type="number" [(ngModel)]="noofvisitors" formControlName="noofvisitors"></ion-input>
+        <ion-label >Age Group</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.agegroup" formControlName="agegroup"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Age Group</ion-label>
-        <ion-input type="text" [(ngModel)]="agegroup" formControlName="agegroup"></ion-input>
+        <ion-label >Prefered Food</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.foodprefer" formControlName="foodprefer"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Prefered Food</ion-label>
-        <ion-input type="text" [(ngModel)]="foodprefer" formControlName="foodprefer"></ion-input>
+        <ion-label >Intrested Activities</ion-label>
+        <ion-input type="text" [(ngModel)]="sp.intactivities" formControlName="intactivities"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Intrested Activities</ion-label>
-        <ion-input type="text" [(ngModel)]="intactivities" formControlName="intactivities"></ion-input>
+        <ion-label >Date From</ion-label>
+        <ion-input type="date" [(ngModel)]="sp.datefrom" formControlName="datefrom"></ion-input>
       </ion-item>
 
       <ion-item margin-bottom>
-        <ion-label floating>Date From</ion-label>
-        <ion-input type="date" [(ngModel)]="datefrom" formControlName="datefrom"></ion-input>
+        <ion-label >Date To</ion-label>
+        <ion-input type="date" [(ngModel)]="sp.dateto" formControlName="dateto"></ion-input>
       </ion-item>
 
-      <ion-item margin-bottom>
-        <ion-label floating>Date To</ion-label>
-        <ion-input type="date" [(ngModel)]="dateto" formControlName="dateto"></ion-input>
-      </ion-item>
-
-      <button ion-button color="primary" text-center block>Save this record</button>
+      <button ion-button color="energized" text-center block>Save this record</button>
     </ion-list>
   </form>
 

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TravelAgentsPage } from '../travel-agents/travel-agents';
+import { ClientsPage } from '../clients/clients';
 /**
  * Generated class for the EditClientPage page.
  *
@@ -24,7 +24,6 @@ export class EditClientPage {
 
   public fname: string;
   public lname: string;
-  public password: any;
   public email: any;
   public address: string;
   public city: string;
@@ -33,7 +32,6 @@ export class EditClientPage {
   public noofvisitors: number;
   public agegroup: string;
   public telephone: [string];
-  public rePassword: any;
   public foodprefer: string;
   public intactivities: string;
   public datefrom: string;
@@ -53,8 +51,6 @@ export class EditClientPage {
       'fname': ['', Validators.required],
       'lname': ['', Validators.required],
       'email': ['', Validators.required],
-      'password': ['', Validators.required],
-      'rePassword': ['', Validators.required],
       'telephone': ['', Validators.required],
       'address': ['', Validators.required],
       'city': ['', Validators.required],
@@ -81,7 +77,6 @@ export class EditClientPage {
       country: any = this.form.controls['country'].value,
       postalcode: any = this.form.controls['postalcode'].value,
       email: any = this.form.controls['email'].value,
-      password: any = this.form.controls['password'].value,
       telephone: any = this.form.controls['telephone'].value,
       agegroup: any = this.form.controls['agegroup'].value,
       noofvisitors: any = this.form.controls['noofvisitors'].value,
@@ -94,7 +89,6 @@ export class EditClientPage {
         fname: fname,
         lname: lname,
         email: email,
-        password: password,
         telephone: telephone,
         address: address,
         city: city,
@@ -117,7 +111,7 @@ export class EditClientPage {
         (error: any) => {
           console.dir(error);
         });
-    this.navCtrl.push(TravelAgentsPage);
+    this.navCtrl.push(ClientsPage);
   }
 
   displayNotification(message: string): void {
@@ -136,8 +130,6 @@ export class EditClientPage {
     this.country = ""
     this.postalcode = ""
     this.email = "";
-    this.password = "";
-    this.rePassword = "";
     this.telephone = [null];
     this.noofvisitors = null;
     this.agegroup = "";
