@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col>
+      <ion-title align="center">
+        <img src="../../assets/imgs/vtour.png" style="display:block;width:60%;height:auto;margin-left:auto;margin-right:auto;"/>
+      </ion-title>
+    </ion-col>
+  </ion-row>
+
+  <ion-card>
+    <div class="login-box">
+      <form #loginForm="ngForm">
+
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              <ion-item>
+                  <ion-label floating>
+                      Email
+                  </ion-label> 
+                  <ion-input type="text" placeholder="" name="username" [(ngModel)]="username" required></ion-input>
+                </ion-item>
+              
+              <ion-item>
+                  <ion-label floating>
+                      Password
+                  </ion-label>
+                  <ion-input type="password" placeholder="" name="password" [(ngModel)]="password" required></ion-input>
+                </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="signup-col">
+            <button ion-button class="submit-btn" (click)= "login()" full type="submit" [disabled]="!loginForm.invalid">
+              Login
+            </button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+    <button ion-button clear color="grey" (click)= "ForgotPassword()">
+      Forgot Password
+    </button>
+  </ion-card>
+
+</ion-content>
