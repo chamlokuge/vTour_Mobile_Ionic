@@ -4,7 +4,7 @@ import { AddNewAgentPage } from './../pages/add-new-agent/add-new-agent';
 
 import { EditClientPage } from './../pages/edit-client/edit-client';
 import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
-
+import { ViewItenararyPage } from '../pages/view-itenarary/view-itenarary';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -38,6 +38,7 @@ export class MyApp {
       { title: 'Travel Agents', component: TravelAgentsPage },
       { title: 'Clients', component: ClientsPage },
       { title: 'Service Providers', component: ServiceProvidersPage },
+      { title: 'Itenararies', component: ViewItenararyPage },
     ];
 
   }

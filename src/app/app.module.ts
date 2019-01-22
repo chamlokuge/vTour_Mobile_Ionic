@@ -3,7 +3,7 @@ import { EditPackagePage } from './../pages/edit-package/edit-package';
 import { PackagesPage } from './../pages/packages/packages';
 import { AddNewServiceProviderPage } from './../pages/add-new-service-provider/add-new-service-provider';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
-
+import { ViewItenararyPage} from '../pages/view-itenarary/view-itenarary';
 import { EditClientPage } from './../pages/edit-client/edit-client';
 import { AddNewClientPage } from './../pages/add-new-client/add-new-client';
 import { ClientsPage } from './../pages/clients/clients';
@@ -50,7 +50,8 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     PackagesPage,
     EditPackagePage,
     AddNewPackagePage,
-    EditClientPage
+    EditClientPage,
+    ViewItenararyPage
 
   ],
   imports: [
@@ -77,6 +78,7 @@ import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-s
     EditPackagePage,
     AddNewPackagePage,
     EditClientPage,
+    ViewItenararyPage
 
   ],
   providers: [
