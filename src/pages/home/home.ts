@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EditProfilePage } from '../edit-profile/edit-profile';
-import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { ResetPasswordPage } from '../reset-password/reset-password';
 import { IonicPage, NavController, NavParams, Alert, AlertController, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import {FormBuilder,FormGroup,Validators} from '@angular/forms';
@@ -42,7 +42,7 @@ export class HomePage {
 
 
 ForgotPassword(){
-  this.navCtrl.push(ForgotPasswordPage);
+  this.navCtrl.push(ResetPasswordPage);
 }
 
 login(){

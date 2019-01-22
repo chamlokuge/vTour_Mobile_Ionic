@@ -34,7 +34,7 @@ import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-ag
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-service-providers';
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
+import { ResetPasswordPage } from './../pages/reset-password/reset-password';
 import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
 
 import { AuthProvider } from '../providers/auth/auth';
@@ -60,7 +60,7 @@ import { ProfilePage } from '../pages/profile/profile';
     AddNewPackagePage,
     EditClientPage,
     ViewItenararyPage,
-    ForgotPasswordPage,
+    ResetPasswordPage,
     TravelAgentProfilePage,
     PaymentsPage,
     BookingsPage,
@@ -92,7 +92,7 @@ import { ProfilePage } from '../pages/profile/profile';
     AddNewPackagePage,
     EditClientPage,
     ViewItenararyPage,
-    ForgotPasswordPage,
+    ResetPasswordPage,
     TravelAgentProfilePage,
     PaymentsPage,
     BookingsPage,

@@ -21,7 +21,6 @@ import { ListPage } from '../pages/list/list';
 import { EditProfilePage } from './../pages/edit-profile/edit-profile';
 import { TravelAgentsPage } from './../pages/travel-agents/travel-agents';
 import { EditTravelAgentPage } from './../pages/edit-travel-agent/edit-travel-agent';
-import { ForgotPasswordPage } from './../pages/forgot-password/forgot-password';
 import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
 
 

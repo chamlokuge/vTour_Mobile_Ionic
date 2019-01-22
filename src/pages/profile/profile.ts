@@ -19,7 +19,7 @@ export class ProfilePage {
 
   form:any;
   data:any;
-  public item : any;
+  item : any;
   public fname: string;
   public lname: string;
   public username: string;
@@ -35,6 +35,7 @@ export class ProfilePage {
               private _TOAST: ToastController) {
   
   this.data = navParams.get('record');
+  this.getDetails();
   }
 
   ionViewDidLoad() :void{
@@ -46,11 +47,9 @@ export class ProfilePage {
     if(this.data.user.usertype=="travelagent"){
       this._HTTP
       .get(this._TAHOST + this.data.user.id)
-      .subscribe((data : any) =>
+      .subscribe((res : any) =>
       {
-         this.item = data;
-         console.log(this.item);
-
+        this.item = res;
       },
       (error : any) =>
       {
