@@ -62,7 +62,7 @@ login(){
         });
         alert.present();
       }else{
-        this.navCtrl.push(TravelAgentsPage);
+        this.navCtrl.push(TravelAgentsPage,{record:data});
       }
     },
       (error: any) => {
