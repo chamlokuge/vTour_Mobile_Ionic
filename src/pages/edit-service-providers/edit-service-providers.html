@@ -43,13 +43,15 @@
 
       <ion-item margin-bottom>
         <ion-label >Description</ion-label>
-        <ion-input type="text" [(ngModel)]="tagent.description" formControlName="description"></ion-input>
+        <ion-input type="text" [(ngModel)]="tagent.discription" formControlName="description"></ion-input>
       </ion-item>
 
       <button ion-button color="energized" text-center block>Save this record</button>
       <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
     </ion-list>
   </form>
+          <button ion-button color="energized" text-center outline (click)="changePassword()">Change Passwordd</button>
+
 
 
 </ion-content>

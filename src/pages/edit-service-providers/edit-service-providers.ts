@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ServiceProvidersPage } from '../service-providers/service-providers';
+import { AlertController } from 'ionic-angular';
+
 /**
  * Generated class for the EditServiceProvidersPage page.
  *
@@ -28,12 +30,15 @@ export class EditServiceProvidersPage {
   public username: string
 
   private _HOST: string = "http://localhost:4201/";
+  private _LOGINHOST: string = "http://localhost:4201/login";
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private _FB: FormBuilder,
     private _HTTP: HttpClient,
-    private _TOAST: ToastController) {
+    private _TOAST: ToastController,
+    private alertCtrl: AlertController) {
 
     this.tagent = navParams.get('record');
 
@@ -92,6 +97,101 @@ export class EditServiceProvidersPage {
      this.description = "";
     this.telephone = "";
     this.username = "";
+  }
+  changePassword() {
+    let alert = this.alertCtrl.create({
+      title: 'Enter Email and Password',
+      inputs: [
+        {
+          name: 'email',
+          placeholder: 'Email',
+          type: 'email'
+        },
+        {
+          name: 'password',
+          placeholder: 'Password',
+          type: 'password'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Confirm',
+          handler: data => {
+            let
+              headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+              options: any = { email: data.email, password: data.password },
+              url: any = this._LOGINHOST;
+
+            this._HTTP
+              .post(url, options, headers)
+              .subscribe((data: any) => {
+                if (data.state) {
+                  this.sendPassword();
+                } else {
+                  const alert = this.alertCtrl.create({
+                    title: 'ERROR',
+                    subTitle: 'Invaild Email or Password',
+                    buttons: ['OK']
+                  });
+                  alert.present();
+                }
+              });
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  sendPassword() {
+    let alert = this.alertCtrl.create({
+      title: 'Change Password',
+      inputs: [
+        {
+          name: 'password',
+          placeholder: 'Password',
+          type: 'password'
+        },
+        {
+          name: 'rePassword',
+          placeholder: 'Re Enter Password',
+          type: 'password'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Confirm',
+          handler: data => {
+            let
+              headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+              options: any = { _id: this.tagent._id, password: data.password },
+              url: any = this._HOST + "serviceproviders/changepw/" + this.tagent._id;
+            console.log("options");
+            console.log(options);
+            this._HTTP
+              .put(url, options, headers)
+              .subscribe((data: any) => {
+                if (data) {
+                  const alert = this.alertCtrl.create({
+                    title: 'SUCESS',
+                    subTitle: 'Password Sucessfully Changed',
+                    buttons: ['OK']
+                  });
+                  alert.present();
+                } else {
+                  const alert = this.alertCtrl.create({
+                    title: 'ERROR',
+                    subTitle: 'Password Change Failed',
+                    buttons: ['OK']
+                  });
+                  alert.present();
+                }
+              });
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }
