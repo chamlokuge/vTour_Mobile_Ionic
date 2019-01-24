@@ -70,58 +70,59 @@
     </button>
   </ion-content>-->
 
-  <ion-header>
-      <ion-navbar color="danger">
-        <ion-title>Edit Travel Agent Details</ion-title>
-      </ion-navbar>
-    
-    </ion-header>
-    
-    <ion-content padding>
-    
-      <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-        <ion-list inset>
-          <ion-item margin-bottom>
-            <ion-label >First Name</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.fname" formControlName="fname"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >Last Name</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.lname" formControlName="lname"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >User Name</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.username" formControlName="username"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >Address</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.address" formControlName="address"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >Email</ion-label>
-            <ion-input type="email" [(ngModel)]="tagent.email" formControlName="email"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >Telephone</ion-label>
-            <ion-input type="number" [(ngModel)]="tagent.telephone" formControlName="telephone"></ion-input>
-          </ion-item>
-    
-          <ion-item margin-bottom>
-            <ion-label >Is Admin</ion-label>
-            <ion-input type="text" [(ngModel)]="tagent.isadmin" formControlName="isadmin"></ion-input>
-          </ion-item>
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Edit Travel Agent Details</ion-title>
+  </ion-navbar>
 
-          <button ion-button color="energized" text-center outline (click)="clearForm()">Reset</button>
-    
-          <button ion-button color="energized" text-center block>Save this record</button>
-          <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
-        </ion-list>
-      </form>
-    
-    
-    </ion-content>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <ion-list inset>
+      <ion-item margin-bottom>
+        <ion-label>First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.fname" formControlName="fname"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.lname" formControlName="lname"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>User Name</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.username" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>Address</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.address" formControlName="address"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="tagent.email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>Telephone</ion-label>
+        <ion-input type="number" [(ngModel)]="tagent.telephone" formControlName="telephone"></ion-input>
+      </ion-item>
+
+      <ion-item margin-bottom>
+        <ion-label>Is Admin</ion-label>
+        <ion-input type="text" [(ngModel)]="tagent.isadmin" formControlName="isadmin"></ion-input>
+      </ion-item>
+
+      <button ion-button color="energized" text-center outline (click)="clearForm()">Reset</button>
+      <button ion-button color="energized" text-center block>Save this record</button>
+      <!-- <button ion-button class="submit-btn" full type="submit" [disabled]="!Form.form.valid"> Save this Record</button> -->
+    </ion-list>
+  </form>
+        <button ion-button color="energized" text-center outline (click)="changePassword()">Change Passwordd</button>
+
+
+
+</ion-content>

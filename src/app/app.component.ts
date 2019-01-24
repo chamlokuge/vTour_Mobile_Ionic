@@ -1,5 +1,4 @@
 import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
-import { BookingsPage } from './../pages/bookings/bookings';
 import { PaymentsPage } from './../pages/payments/payments';
 import { ServiceProvidersPage } from './../pages/service-providers/service-providers';
 import { ClientsPage } from './../pages/clients/clients';
@@ -48,7 +47,6 @@ export class MyApp {
       { title: 'Itenararies', component: ViewItenararyPage },
       { title: 'Itinerary Payments', component: PaymentsPage },
       { title: 'Package Payments', component: PackagePaymentsPage },
-      { title: 'Bookings', component: BookingsPage },
     ];
 
   }

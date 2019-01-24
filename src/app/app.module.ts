@@ -1,5 +1,4 @@
 import { PackagePaymentsPage } from './../pages/package-payments/package-payments';
-import { BookingsPage } from './../pages/bookings/bookings';
 import { PaymentsPage } from './../pages/payments/payments';
 import { AddNewPackagePage } from './../pages/add-new-package/add-new-package';
 import { EditPackagePage } from './../pages/edit-package/edit-package';
@@ -62,7 +61,6 @@ import { AuthProvider } from '../providers/auth/auth';
     ResetPasswordPage,
     TravelAgentProfilePage,
     PaymentsPage,
-    BookingsPage,
     PackagePaymentsPage,
     ServiceProviderProfilePage
   ],
@@ -94,7 +92,6 @@ import { AuthProvider } from '../providers/auth/auth';
     ResetPasswordPage,
     TravelAgentProfilePage,
     PaymentsPage,
-    BookingsPage,
     PackagePaymentsPage,
     ServiceProviderProfilePage
 
