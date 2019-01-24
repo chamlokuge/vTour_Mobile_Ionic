@@ -31,6 +31,8 @@
         <ion-card-content>
           <p>Itinerary Name : {{tagent.itenararyname}}<br>Amount : {{tagent.amount}}<br>Date : {{tagent.date}}<br>Status :{{tagent.status}}</p>
         </ion-card-content>
+        <button *ngIf="tagent.status!='Payment Recived'" ion-button outline color="danger" (click)="confirmPayment(tagent._id)">Confirm Payment</button>
+
       </ion-card>
         
   </ion-content>

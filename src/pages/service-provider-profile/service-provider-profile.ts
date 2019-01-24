@@ -1,10 +1,11 @@
+import { AddNewPackagePage } from './../add-new-package/add-new-package';
 import { EditPackagePage } from './../edit-package/edit-package';
+import { EditServiceProvidersPage } from './../edit-service-providers/edit-service-providers';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 /**
- * Generated class for the PackagesPage page.
+ * Generated class for the ServiceProviderProfilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,27 +13,26 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @IonicPage()
 @Component({
-  selector: 'page-packages',
-  templateUrl: 'packages.html',
+  selector: 'page-service-provider-profile',
+  templateUrl: 'service-provider-profile.html',
 })
-export class PackagesPage {
-
+export class ServiceProviderProfilePage {
+  sp: any;
   public items: Array<any>;
-  sp:any;
   private _HOST: string = "http://localhost:4201/";
 
-  constructor(public navCtrl: NavController,
-    private _TOAST: ToastController,
-    private _HTTP: HttpClient,
-    public navParams: NavParams,
-  ) {
-  this.sp = this.navParams.get('record');
-}
-  ionViewDidEnter(): void {
+  constructor(private _HTTP: HttpClient,public navCtrl: NavController, public navParams: NavParams) {
+    this.sp = navParams.get('record');
 
-    this.retrieve();
   }
 
+  ionViewDidLoad() {
+    this.retrieve();
+  }
+  updateRecord(item: any): void {
+    console.log("edit");
+    this.navCtrl.push(EditServiceProvidersPage, { record: item });
+  }
   retrieve(): void {
     this._HTTP
       .get(this._HOST + "packages")
@@ -44,7 +44,6 @@ export class PackagesPage {
           console.dir(error);
         });
   }
-
   deleteRecord(item: any): void {
     let recordID: string = item._id,
       url: any = this._HOST + "packages/" + recordID;
@@ -53,23 +52,18 @@ export class PackagesPage {
       .delete(url)
       .subscribe((data: any) => {
         this.retrieve();
-        this.displayNotification(data.records.name + ' was successfully deleted');
       },
         (error: any) => {
           console.dir(error);
         });
   }
 
-  updateRecord(item: any): void {
+  updatePackage(item: any): void {
     this.navCtrl.push(EditPackagePage, { record: item });
   }
+  addNewPackage(){
+    this.navCtrl.push(AddNewPackagePage);
 
-
-  displayNotification(message: string): void {
-    let toast = this._TOAST.create({
-      message: message,
-      duration: 3000
-    });
-    toast.present();
   }
+
 }

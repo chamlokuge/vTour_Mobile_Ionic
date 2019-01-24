@@ -7,12 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>travelAgentProfile</ion-title>
+    <ion-title>Travel Agent Profile</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{this.tagent.fname}} {{this.tagent.lname}}</ion-card-title>
+      </ion-card-header>
 
+      <ion-card-content>
+        Email : {{this.tagent.email}}<br>
+        Telehpone : {{this.tagent.telephone}}<br>
+        Address : {{this.tagent.address}}
+      </ion-card-content>
+    </ion-card>
+    <button (click)="updateRecord(tagent)">Edit</button>
+
+  <ion-item *ngFor="let it of items">
+    <ion-item *ngIf="it.traveAgentName==this.tagent.username">
+      <ion-avatar item-start>
+      </ion-avatar>
+      <h2>{{ it.name }}</h2>
+      <p>Travel Agent : {{it.name}}<br>Note : {{it.note}}<br>Last Updated : {{it.date_time}}</p>
+      <ion-item *ngFor="let event of it.events; let i = index">
+        <h5 class="card-title" id="contentToConvert2">{{i+1}}. {{event.name}} </h5>
+      </ion-item>
+    </ion-item>
+  </ion-item>
 </ion-content>

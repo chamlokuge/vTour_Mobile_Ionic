@@ -36,9 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { EditServiceProvidersPage } from '../pages/edit-service-providers/edit-service-providers';
 import { ResetPasswordPage } from './../pages/reset-password/reset-password';
 import { TravelAgentProfilePage } from './../pages/travel-agent-profile/travel-agent-profile';
-
+import { ServiceProviderProfilePage} from '../pages/service-provider-profile/service-provider-profile'
 import { AuthProvider } from '../providers/auth/auth';
-import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
@@ -65,7 +64,7 @@ import { ProfilePage } from '../pages/profile/profile';
     PaymentsPage,
     BookingsPage,
     PackagePaymentsPage,
-    ProfilePage
+    ServiceProviderProfilePage
   ],
   imports: [
     BrowserModule,
@@ -97,7 +96,7 @@ import { ProfilePage } from '../pages/profile/profile';
     PaymentsPage,
     BookingsPage,
     PackagePaymentsPage,
-    ProfilePage
+    ServiceProviderProfilePage
 
   ],
   providers: [

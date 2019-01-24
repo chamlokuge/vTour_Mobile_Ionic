@@ -57,5 +57,20 @@ export class PaymentsPage {
  
  }
 
+ confirmPayment(_id:string){
+  let
+    headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
+    options: any = { _id:_id },
+    url: any = this._HOST + "itenararypayments";
+   this._HTTP
+     .put(url + '/' +_id, options, headers)
+     .subscribe((data: any) => {
+       this.retrieve();
+     },
+       (error: any) => {
+         console.dir(error);
+       });
+ }
+
  
 }

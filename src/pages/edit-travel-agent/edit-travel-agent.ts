@@ -12,14 +12,12 @@ export class EditTravelAgentPage {
 
   form:any;
   tagent:any;
-  //private _ID: String;
   public fname: string;
   public lname: string;
   public username: string;
   public email: any;
   public address: string;
   public isadmin: any;
-  //public profilepic: string;
   public telephone: [string];
   private _HOST : string       =  "http://localhost:4201/travelagents";
 

@@ -7,7 +7,8 @@ import {FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { tokenNotExpired } from 'angular2-jwt';
 import { TravelAgentsPage} from '../travel-agents/travel-agents';
-import { ProfilePage} from '../profile/profile';
+import {TravelAgentProfilePage} from '../travel-agent-profile/travel-agent-profile';
+import { ServiceProviderProfilePage} from '../service-provider-profile/service-provider-profile'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -15,7 +16,7 @@ import { ProfilePage} from '../profile/profile';
 export class HomePage {
   user: any;
   authtoken: any;
-
+  item:any;
   private _HOST: string = "http://localhost:4201/";
   public password: any;
   public email: any;
@@ -63,7 +64,27 @@ login(){
         });
         alert.present();
       }else{
-        this.navCtrl.setRoot(ProfilePage,{record:data});
+        if(data.user.usertype=="travelagent"){
+          this._HTTP
+            .get(this._HOST + "travelagents/" + data.user.id)
+            .subscribe((res: any) => {
+              this.navCtrl.setRoot(TravelAgentProfilePage, { record: res });
+            },
+            (error: any) => {
+              console.dir(error);
+            });
+        }else{
+          if (data.user.usertype == "serviceprovider") {
+            this._HTTP
+              .get(this._HOST + "serviceproviders/" + data.user.id)
+              .subscribe((res: any) => {
+                this.navCtrl.setRoot(ServiceProviderProfilePage, { record: res });
+            },
+              (error: any) => {
+              console.dir(error);
+            });
+          }else{}
+        } 
       }
     },
       (error: any) => {
