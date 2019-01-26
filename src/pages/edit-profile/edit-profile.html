@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>editProfile</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<!-- <ion-content padding>
+
+</ion-content> -->
+
+<!-- <ion-view title="Edit Profile" id="page2"> -->
+  <!-- <ion-content padding="true" class="has-header">
+    <div>
+      <img src="img/3rXKUmGoT6u6O4JlzFSJ_propic.jpg" style="display: block; width: 30%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 300px; height: 4px;"></div>
+    <form id="editProfile-form1" class="list">
+      <label class="item item-input" id="editProfile-input2" name="fname">
+        <span class="input-label">First Name</span>
+        <input type="text" placeholder="enter your first name ">
+      </label>
+      <label class="item item-input" id="editProfile-input3" name="lname">
+        <span class="input-label">Last Name</span>
+        <input type="text" placeholder="enter your last name">
+      </label>
+      <label class="item item-input" id="editProfile-input4" name="email">
+        <span class="input-label">E-mail</span>
+        <input type="email" placeholder="e-mail">
+      </label>
+      <label class="item item-input" id="editProfile-input5" name="telephone">
+        <span class="input-label">Telephone</span>
+        <input type="tel" placeholder="telephone">
+      </label>
+      <label class="item item-input" id="editProfile-textarea1" name="address">
+        <span class="input-label">Address</span><textarea placeholder="address"></textarea></label>
+      <ion-toggle toggle-class="toggle-positive" id="editProfile-toggle3">Is Admin</ion-toggle>
+      <button id="editProfile-button23" class="button button-positive button-block">Update Details</button>
+      <div id="editProfile-button-bar2" class="button-bar">
+        <button id="editProfile-button7" style="font-weight:600;font-size:14px;" class="button button-positive button-block button-outline">Change Password</button>
+        <button id="editProfile-button8" style="font-weight:600;" class="button button-positive button-small button-block button-outline">Change Profile Pic</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view> -->
+
+
+<ion-content padding id="page1" style="background-color:#F9FBFA;">
+  <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+    <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+  </div>
+  <form id="editProfile-form2">
+    <ion-item id="editProfile-input3">
+      <ion-label>
+        First Name
+      </ion-label>
+      <ion-input type="text" placeholder="enter your first name" name="fname"></ion-input>
+    </ion-item>
+    <ion-item id="editProfile-input4">
+      <ion-label>
+        Last Name
+      </ion-label>
+      <ion-input type="text" placeholder="enter your last name" name="lname"></ion-input>
+    </ion-item>
+    <ion-item id="editProfile-input5">
+      <ion-label>
+        E-mail
+      </ion-label>
+      <ion-input type="email" placeholder="e-mail" name="email"></ion-input>
+    </ion-item>
+    <ion-item id="editProfile-input6">
+      <ion-label>
+        Telephone
+      </ion-label>
+      <ion-input type="tel" placeholder="telephone" name="telephone"></ion-input>
+    </ion-item>
+    <ion-item id="editProfile-textarea1">
+      <ion-label>
+        Address
+      </ion-label>
+      <ion-textarea placeholder="address"></ion-textarea>
+    </ion-item>
+  </form>
+  <button id="editProfile-button1" ion-button color="danger" block>
+    Update Details
+  </button>
+  <!-- <button id="editProfile-button2" ion-button color="positive">
+    Change Password
+  </button> -->
+  <button ion-button outline color="danger" >Change Password</button>
+  <button ion-button outline color="danger">
+    Change Pro-pic
+  </button>
+</ion-content>

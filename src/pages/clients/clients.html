@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Clients</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item *ngFor="let client of items">
+      <ion-avatar item-start>
+      </ion-avatar>
+      <h2>{{ client.fname }} {{client.lname}}</h2>
+      <p>Email : {{client.email}}<br>Telephone : {{client.telephone}}<br>Address : {{client.address}}<br>City : {{client.city}}<br>Country : {{client.country}}
+      <br>Postal Code : {{client.postalcode}}<br>Date From : {{client.datefrom}}<br>Date To : {{client.dateto}}<br>Prefered Food : {{client.foodprefer}}
+      <br>Interested Activities : {{client.intactivities}}<br>Age Group : {{client.agegroup}}<br>No of Visitors : {{client.noofvisitors}}</p>
+
+      <ion-buttons end>
+        <button ion-button icon-only color="red" (click)="deleteRecord(client)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+
+        <button ion-button icon-only color="energized" (click)="updateRecord(client)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full item-end icon-start color="danger" (click)="addNewClient()">
+    <ion-icon name="add"></ion-icon>
+    Add New Client
+  </button>
+</ion-content>
